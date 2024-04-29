@@ -1,7 +1,10 @@
 import Post from "./components/Post.jsx";
 
-function App() {
-  return <Post />;
+function App () {
+  return <main>
+    <Post />
+    <Post />
+  </main>;
 }
 
 export default App;
