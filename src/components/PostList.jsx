@@ -3,7 +3,7 @@ import classes from "./PostList.module.css"
 
 const PostList = () => {
   return (
-    <ul className={classes.postList}>
+    <ul className={classes.posts}>
       <Post author={"Sherry"} body={"Bug Report"} />
       <Post author={"Cask"} body={"Base Woods"} />
     </ul>
