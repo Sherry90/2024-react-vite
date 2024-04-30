@@ -7,6 +7,8 @@ const PostList = () => {
       <Post author={"Sherry"} body={"Bug Report"} />
       <Post author={"Cask"} body={"Base Woods"} />
     </ul>
+    <>
+    </>
   );
 };
 
