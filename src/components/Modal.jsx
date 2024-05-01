@@ -1,10 +1,14 @@
-import classes from "./Modal.module.css"
+import classes from "./Modal.module.css";
 
-const Modal = () => {
-  return <>
-    <div className={classes.backdrop} />
-    <dialog className={classes.modal}></dialog>
-  </>
+const Modal = ({ children }) => {
+  return (
+    <>
+      <div className={classes.backdrop} />
+      <dialog open={true} className={classes.modal}>
+        {children}
+      </dialog>
+    </>
+  );
 };
 
 export default Modal;
