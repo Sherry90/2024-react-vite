@@ -1,11 +1,13 @@
 import PostList from "./components/PostList.jsx";
+import MainHeader from "./components/MainHeader.jsx";
 
 function App() {
   return (
-    <main>
-      <PostList />
-    </main>
     <>
+      <MainHeader />
+      <main>
+        <PostList />
+      </main>
     </>
   );
 }
