@@ -30,7 +30,6 @@ const PostList = () => {
             onBodyChange={bodyChangeHandler}
             onAuthorChange={authorChangeHandler}
           />
-          />
         </Modal>
       )}
       <ul className={classes.posts}>
