@@ -18,7 +18,7 @@ const App = () => {
     <>
       <MainHeader />
       <main>
-        <PostList />
+        <PostList isPosting={modalIsVisible} onStopPosting={hideModalHandler} />
       </main>
     </>
   );
