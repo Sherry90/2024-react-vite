@@ -1,7 +1,7 @@
 import PostList from "./components/PostList.jsx";
 import MainHeader from "./components/MainHeader.jsx";
 
-function App() {
+const App = () => {
   return (
     <>
       <MainHeader />
