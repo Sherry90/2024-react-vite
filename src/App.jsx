@@ -5,6 +5,8 @@ function App() {
     <main>
       <PostList />
     </main>
+    <>
+    </>
   );
 }
 
