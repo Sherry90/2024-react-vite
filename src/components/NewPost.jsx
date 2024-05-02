@@ -11,6 +11,10 @@ const NewPost = (props) => {
         <label htmlFor="name">Your name</label>
         <input type="text" id="name" required onChange={props.onAuthorChange} />
       </p>
+      <p className={classes.actions}>
+        <button type={"button"}>Cancel</button>
+        <button>Submit</button>
+      </p>
     </form>
   );
 };
