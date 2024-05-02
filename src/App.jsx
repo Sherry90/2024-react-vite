@@ -16,12 +16,12 @@ const App = () => {
 
   return (
     <>
-      <MainHeader />
+      <MainHeader onCreatePost={showModalHandler} />
       <main>
         <PostList isPosting={modalIsVisible} onStopPosting={hideModalHandler} />
       </main>
     </>
   );
-}
+};
 
 export default App;
