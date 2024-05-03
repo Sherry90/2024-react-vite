@@ -9,7 +9,7 @@ const PostList = ({ isPosting, onStopPosting }) => {
   const [posts, setPost] = useState([]);
 
   const addPostHandler = (postData) => {
-    setPost((existingPosts ) => [postData, ...existingPosts]);
+    setPost((existingPosts) => [postData, ...existingPosts]);
   };
 
   return (
@@ -19,9 +19,17 @@ const PostList = ({ isPosting, onStopPosting }) => {
           <NewPost onCancel={onStopPosting} onAddPost={addPostHandler} />
         </Modal>
       )}
-      <ul className={classes.posts}>
-        <Post author={"Cask"} body={"Base Woods"} />
-      </ul>
+      {posts.length > 0 && (
+        <ul className={classes.posts}>
+          {posts.map((post) => (
+            <Post
+              key={Math.floor(Math.random() * 1000000)}
+              author={post.author}
+              body={post.body}
+            />
+          ))}
+        </ul>
+      )}
     </>
   );
 };
