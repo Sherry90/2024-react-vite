@@ -9,6 +9,13 @@ const PostList = ({ isPosting, onStopPosting }) => {
   const [posts, setPost] = useState([]);
 
   const addPostHandler = (postData) => {
+    fetch("http://localhost:8080/posts", {
+      method: "POST",
+      body: JSON.stringify(postData),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
     setPost((existingPosts) => [postData, ...existingPosts]);
   };
 
