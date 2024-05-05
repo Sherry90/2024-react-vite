@@ -1,7 +1,6 @@
 import { useState } from "react";
 
 import PostList from "./components/PostList.jsx";
-import MainHeader from "./components/MainHeader.jsx";
 
 const Posts = () => {
   const [modalIsVisible, setModalIsVisible] = useState(false);
@@ -16,7 +15,6 @@ const Posts = () => {
 
   return (
     <>
-      <MainHeader onCreatePost={showModalHandler} />
       <main>
         <PostList isPosting={modalIsVisible} onStopPosting={hideModalHandler} />
       </main>
