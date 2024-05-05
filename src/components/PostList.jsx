@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 import Post from "./Post.jsx";
-import NewPost from "./NewPost.jsx";
+import NewPost from "../routes/NewPost.jsx";
 import Modal from "./Modal.jsx";
 import classes from "./PostList.module.css";
 
