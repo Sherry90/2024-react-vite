@@ -3,7 +3,7 @@ import { useState } from "react";
 import PostList from "./components/PostList.jsx";
 import MainHeader from "./components/MainHeader.jsx";
 
-const App = () => {
+const Posts = () => {
   const [modalIsVisible, setModalIsVisible] = useState(false);
 
   const showModalHandler = () => {
@@ -24,4 +24,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Posts;
