@@ -49,7 +49,7 @@ const PostList = () => {
           <p>Start adding some!</p>
         </div>
       )}
-      {isPosting && (
+      {(
         <div style={{ textAlign: "center", color: "white" }}>
           <p>Loading posts...</p>
         </div>
