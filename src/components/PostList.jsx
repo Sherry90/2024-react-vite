@@ -9,7 +9,7 @@ const PostList = () => {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      setIsFetching(true);  
+      setIsFetching(true);
       const response = await fetch("http://localhost:8080/posts");
       const resData = await response.json();
       setPost(resData.posts);
@@ -49,7 +49,7 @@ const PostList = () => {
           <p>Start adding some!</p>
         </div>
       )}
-      {(
+      {isFetching && (
         <div style={{ textAlign: "center", color: "white" }}>
           <p>Loading posts...</p>
         </div>
