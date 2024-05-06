@@ -1,51 +1,19 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Form } from "react-router-dom";
 
 import Modal from "../components/Modal.jsx";
 import classes from "./NewPost.module.css";
 
 const NewPost = () => {
-  const [enteredBody, setEnteredBody] = useState("");
-  const [enteredAuthor, setEnteredAuthor] = useState("");
-
-  const bodyChangeHandler = (event) => {
-    setEnteredBody(event.target.value);
-  };
-
-  const authorChangeHandler = (event) => {
-    setEnteredAuthor(event.target.value);
-  };
-
-  const submitHandler = (event) => {
-    event.preventDefault();
-    const postData = {
-      body: enteredBody,
-      author: enteredAuthor,
-    };
-    fetch("http://localhost:8080/posts", {
-      method: "POST",
-      body: JSON.stringify(postData),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
-  };
-
   return (
     <Modal>
-      <form className={classes.form} onSubmit={submitHandler}>
+      <Form method="post" className={classes.form}>
         <p>
           <label htmlFor="body">Text</label>
-          <textarea id="body" required rows={3} onChange={bodyChangeHandler} />
+          <textarea id="body" name="body" required rows={3} />
         </p>
         <p>
           <label htmlFor="name">Your name</label>
-          <input
-            type="text"
-            id="name"
-            required
-            onChange={authorChangeHandler}
-          />
+          <input type="text" id="name" name="author" required />
         </p>
         <p className={classes.actions}>
           <Link to={".."} type={"button"}>
@@ -53,7 +21,7 @@ const NewPost = () => {
           </Link>
           <button>Submit</button>
         </p>
-      </form>
+      </Form>
     </Modal>
   );
 };
