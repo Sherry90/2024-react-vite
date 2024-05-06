@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import Modal from "../components/Modal.jsx";
 import classes from "./NewPost.module.css";
 
-const NewPost = ({ onAddPost }) => {
+const NewPost = () => {
   const [enteredBody, setEnteredBody] = useState("");
   const [enteredAuthor, setEnteredAuthor] = useState("");
 
@@ -22,7 +22,13 @@ const NewPost = ({ onAddPost }) => {
       body: enteredBody,
       author: enteredAuthor,
     };
-    onAddPost(postData);
+    fetch("http://localhost:8080/posts", {
+      method: "POST",
+      body: JSON.stringify(postData),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
   };
 
   return (
