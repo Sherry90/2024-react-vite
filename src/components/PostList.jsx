@@ -12,7 +12,8 @@ const PostList = () => {
         <ul className={classes.posts}>
           {posts.map((post) => (
             <Post
-              key={Math.floor(Math.random() * 1000000)}
+              key={post.id}
+              id={post.id}
               author={post.author}
               body={post.body}
             />
